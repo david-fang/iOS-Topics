@@ -3,6 +3,10 @@
 ### Link to Stanford Course
 https://github.com/cRui861/Final_iOS_Project
 
+### Credits
+
+Credits for some of the conceptual explanations and images go to Ray Wenderlich and Apple Reference manual.
+
 ### Model View Controler
 
 The **Model View Controller (MVC)** architecture assigns every object a particular role: (1) model, (2) view, or (3) controller. Each of these roles are delegated specific tasks, in an effort to create a better means of abstracting the application and to prevent one object file from getting too cluttered.
