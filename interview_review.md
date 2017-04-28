@@ -1,7 +1,7 @@
 # __iOS Interview Review__
 
 ### Link to Stanford Course
-https://github.com/cRui861/Final_iOS_Project
+https://www.youtube.com/watch?v=_lRx1zoriPo
 
 ### Credits
 
