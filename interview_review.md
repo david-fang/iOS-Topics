@@ -98,9 +98,9 @@ Queues are the main blocks of operations that get scheduled by GCD. These queues
 
 GCD provides three types of queues, each subclassing a _concurrent_ or _serial structure_
 
-**Main Queue** The main queue is a serial queue whose items are run on the main thread.
-**Global Queues** Global queues are concurrent queues shared by the whole system. There are a total of four global queues, which with its own priority: (1) high, (2) default, (3) low, and (4) background. 
-**Custom Queues** Queues that you can set to be concurrent or serial and typically get handled by one of the global queues.
+1. **Main Queue** The main queue is a serial queue whose items are run on the main thread.
+2. **Global Queues** Global queues are concurrent queues shared by the whole system. There are a total of four global queues, which with its own priority: (1) high, (2) default, (3) low, and (4) background. 
+3. **Custom Queues** Queues that you can set to be concurrent or serial and typically get handled by one of the global queues.
 
 When setting up global queues, you do not specify  a priority. Rather, you specify a **quality of service (QoS)** value:
 
