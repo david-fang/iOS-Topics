@@ -3,6 +3,10 @@
 ### Link to Stanford Course
 https://github.com/cRui861/Final_iOS_Project
 
+### Credits
+
+Credits for some of the conceptual explanations and images go to Ray Wenderlich and Apple Reference manual.
+
 ### Model View Controler
 
 The **Model View Controller (MVC)** architecture assigns every object a particular role: (1) model, (2) view, or (3) controller. Each of these roles are delegated specific tasks, in an effort to create a better means of abstracting the application and to prevent one object file from getting too cluttered.
@@ -80,7 +84,7 @@ In addition to the app lifecylce, there is also the **view lifecycle**, which ca
 
 ### Grand Central Dispatch (GCD)
 
-Multithreading in iOS apps is achieved by a low-level API called **Grand Central Dispatch** which manages concurrent operations in your application. When multithreading, blocks of code are added to _dispatch queues_, with GCD deciding which queues to run, essentially acting as a scheduler. [^1] 
+Multithreading in iOS apps is achieved by a low-level API called **Grand Central Dispatch** which manages concurrent operations in your application. When multithreading, blocks of code are added to _dispatch queues_, with GCD deciding which queues to run, essentially acting as a scheduler. <sup>1</sup>
 
 ##### Concurrent vs. Serial Queues
 
@@ -101,7 +105,7 @@ GCD provides three types of queues, each subclassing a _concurrent_ or _serial s
 When setting up global queues, you do not specify  a priority. Rather, you specify a **quality of service (QoS)** value:
 
 * user-interactive: This represents tasks that need to be done immediately. This often includes UI updates, event handling, etc. All user-interactive tasks should run on the main thread.
-* user-inititated: This represents tasks that were started by the user and can be run asynchronously [^2]
+* user-inititated: This represents tasks that were started by the user and can be run asynchronously <sup>2</sup>
 * utility: This represents tasks that may take some more time and may not finish right away, such as progress bars or retrieving data
 * background: This represents tasks that isn't visible to the user such as backups, indexing, pre-fetching, etc.
 * unspecified: This represents tasks that have the lowest priority
@@ -275,6 +279,8 @@ func divide(dividend: Double, divisor: Double?) -> Double? {
 }
 ```
 
-[^1]: In iOS, dispatch queues are executed in FIFO order.
-[^2]: A synchronous task is one that will only return control after the task has fully been realized. Because synchronous tasks "block", they create bottlenecks for the rest of the programs that are running. This is one of the main reasons why UI updates should be done asynchronously and also why utility tasks should not be done on the main thread: imagine the user pressing a button but the main thread is still downloading 100GBs of data. It will take forever before the button handler is invoked. The solution is running asynchronouos tasks, which do not block the current thread of execution from proceeding past that function call. These tasks typically involve a callback function that is called when the asynchronous task is complete.
+---------------------------
+
+1. In iOS, dispatch queues are executed in FIFO order.
+2. A synchronous task is one that will only return control after the task has fully been realized. Because synchronous tasks "block", they create bottlenecks for the rest of the programs that are running. This is one of the main reasons why UI updates should be done asynchronously and also why utility tasks should not be done on the main thread: imagine the user pressing a button but the main thread is still downloading 100GBs of data. It will take forever before the button handler is invoked. The solution is running asynchronouos tasks, which do not block the current thread of execution from proceeding past that function call. These tasks typically involve a callback function that is called when the asynchronous task is complete.
 
