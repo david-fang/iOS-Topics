@@ -86,9 +86,9 @@ Multithreading in iOS apps is achieved by a low-level API called **Grand Central
 
 Queues are the main blocks of operations that get scheduled by GCD. These queues can be either **serial** or **concurrent**. _Serial queues_ guarantee that only one task runs at any given time. _Concurrent queues_ allow multiple tasks to execute at the same time.
 
-![Serial Queue](https://koenig-media.raywenderlich.com/uploads/2014/09/Serial-Queue-Swift.png)
+![Serial Queue](images/serial.png)
 
-![Concurrent Queue](https://koenig-media.raywenderlich.com/uploads/2014/09/Concurrent-Queue-Swift.png)
+![Concurrent Queue](images/concurrent.png)
 
 ##### Task Types and Quality of Service (QoS)
 
